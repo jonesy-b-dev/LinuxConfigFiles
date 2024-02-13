@@ -3,16 +3,24 @@
 # Installs the config files in the repository to the system
 # WARNING this overwrites the current files in the repository.
 
+show_help(){
+    echo "Avalible options.."
+    echo "-b    Install bash configs"
+    echo "-v    Install nvim configs"
+    echo "-h    Show help information"
+}
 install_bash=false
 install_nvim=false
 
 # Parse cl option
-while getopts "bv" opt; do
+while getopts "bvh" opt; do
 	case ${opt} in
 		b) 
         install_bash=true ;;
 		v) 
         install_nvim=true ;;
+        h) # Show help
+        show_help ;;
 	esac
 done
 
