@@ -5,24 +5,40 @@
 
 show_help(){
     echo "Avalible options.."
+    echo "To install use option -i and to update the files in the repo use option -u."
     echo "-b    Install bash configs"
     echo "-v    Install nvim configs"
     echo "-h    Show help information"
 }
+
+update=false
+install=false
+
 install_bash=false
 install_nvim=false
+update_bash=false
+update_nvim=false
 
 # Parse cl option
-while getopts "bvh" opt; do
+while getopts "iubvh" opt; do
 	case ${opt} in
+    u)
+        update=true  ;;
+    i)
+        install=true  ;;
 		b) 
         install_bash=true ;;
 		v) 
         install_nvim=true ;;
-        h) # Show help
+    h) # Show help
         show_help ;;
 	esac
 done
+
+if [[("$install_i" && "$install_u") || ( ! "$install_i" && "$install_u" ) ]]; then
+  echo "You must either provide the -i or -u option, not both of neither."
+  exit 1
+fi 
 
 # If no options provided, perform full install
 if [[ $# -eq 0 ]]; then
