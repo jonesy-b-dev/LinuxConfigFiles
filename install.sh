@@ -35,8 +35,9 @@ while getopts "iubvh" opt; do
 	esac
 done
 
-if [[("$install_i" && "$install_u") || ( ! "$install_i" && "$install_u" ) ]]; then
+if [[("$install" && "$update") || ( ! "$install" && "$update" ) ]]; then
   echo "You must either provide the -i or -u option, not both of neither."
+  read -p "Press enter to continue..."
   exit 1
 fi 
 
