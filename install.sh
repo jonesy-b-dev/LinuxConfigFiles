@@ -90,7 +90,6 @@ update_configs(
 }
 
 # Check if we need to install or update and call according funciton
-
 if $install; then
   install_configs
   
