@@ -35,17 +35,17 @@ while getopts "iubvh" opt; do
 	esac
 done
 
+# If no options provided, exit the progra
+if [[ $# -eq 0 ]]; then
+  echo "Please provide an option, run ./install.sh -h to see all avalble options."
+  exit 1
+fi
+
 if [[("$install" && "$update") || ( ! "$install" && "$update" ) ]]; then
   echo "You must either provide the -i or -u option, not both of neither."
   read -p "Press enter to continue..."
   exit 1
 fi 
-
-# If no options provided, perform full install
-if [[ $# -eq 0 ]]; then
-    install_bash=true
-    install_nvim=true
-fi
 
 # Function to install bash config
 install_bash_config() {
@@ -75,6 +75,25 @@ install_configs() {
     # Add more config installation functions here as needed
 }
 
+update_configs(
+{
+    echo "Updating configs..."
+    if $install_bash; then
+        update_bash_config
+    fi
 
-# Execute installation
-install_configs
+    if $install_nvim; then
+        update_nvim_config
+    fi
+
+    # Add more config installation functions here as needed
+}
+
+# Check if we need to install or update and call according funciton
+
+if $install; then
+  install_configs
+  
+else; 
+  update_configs
+fi
