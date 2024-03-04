@@ -35,35 +35,58 @@ while getopts "iubvh" opt; do
 	esac
 done
 
+echo update $update
+echo install $install
+echo in nvim $install_nvim
+echo in bash $install_bash
+
 # If no options provided, exit the progra
 if [[ $# -eq 0 ]]; then
   echo "Please provide an option, run ./install.sh -h to see all avalble options."
+  read -p "Press enter to continue..."
   exit 1
 fi
 
-if [[("$install" && "$update") || ( ! "$install" && "$update" ) ]]; then
+if [[($install == true && $update == true) || ( $install == false && $update == false) ]]; then
   echo "You must either provide the -i or -u option, not both of neither."
   read -p "Press enter to continue..."
   exit 1
 fi 
 
 # Function to install bash config
-install_bash_config() {
+install_bash_config() 
+{
     echo "Installing bash config..."
     cp bash/.bashrc bash/.bash_aliases ~/
     # Add commands to install bash config files here
 }
 
 # Function to install vim config
-install_nvim_config() {
+install_nvim_config() 
+{
     echo "Installing nvim config..."
     cp -r nvim/ ~/.config/
     echo "Bah configs installed, please run [source ~./bashrc] to complete the setup."
     # Add commands to install vim config files here
 }
 
+update_bash_config()
+{
+  echo "Updating bash configs... "
+  cp ~/.bashrc ~/.bash_aliases ./bash/
+  echo "Updating complete."
+}
+
+update_nvim_config()
+{
+  echo "Updateing nvim configs..."
+  cp -r ~/.config/nvim ./nvim
+  echo "Updating complete."
+}
+
 # Main installation function
-install_configs() {
+install_configs() 
+{
     if $install_bash; then
         install_bash_config
     fi
@@ -75,7 +98,7 @@ install_configs() {
     # Add more config installation functions here as needed
 }
 
-update_configs(
+update_configs()
 {
     echo "Updating configs..."
     if $install_bash; then
@@ -93,6 +116,6 @@ update_configs(
 if $install; then
   install_configs
   
-else; 
+else 
   update_configs
 fi
