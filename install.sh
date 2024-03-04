@@ -35,11 +35,6 @@ while getopts "iubvh" opt; do
 	esac
 done
 
-echo update $update
-echo install $install
-echo in nvim $install_nvim
-echo in bash $install_bash
-
 # If no options provided, exit the progra
 if [[ $# -eq 0 ]]; then
   echo "Please provide an option, run ./install.sh -h to see all avalble options."
@@ -73,7 +68,7 @@ install_nvim_config()
 update_bash_config()
 {
   echo "Updating bash configs... "
-  cp ~/.bashrc ~/.bash_aliases ./bash/
+  cp -r ~/.bashrc ~/.bash_aliases ./bash/
   echo "Updating complete."
 }
 
