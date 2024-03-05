@@ -68,7 +68,9 @@ install_nvim_config()
 update_bash_config()
 {
   echo "Updating bash configs... "
+  echo "Current changes so far since last commit in the repository"
   cp -r ~/.bashrc ~/.bash_aliases ./bash/
+  git diff ./bash/
   echo "Updating complete."
 }
 
