@@ -1,5 +1,7 @@
 # LCF (Linux Config Files)
-My Linux config files to easily setup some things on Linux
+LCF is an open source Linux config installer to easily sync your Linux config files between devices.
+
+> Warning: this application is in early development and a lot of features still need to be developed. At the moment it is usable but quite limited in features.
 
 ## How to use LCF
 If you want to use this for own use, its the best to fork the repo. 
