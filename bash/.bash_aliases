@@ -21,6 +21,7 @@ alias ei3='(cd~/.config/i3; nvim config)'
 # Whatever
 alias weather='curl wttr.in'
 alias reload='source ~/.bashrc'
+alias install='sudo pacman -S'
 
 # Git related aliases
 alias gs='git status'
