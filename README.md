@@ -23,6 +23,7 @@ Next I can fetch the repository on another system and install the configs.
 - [x] `neovim`
 - [ ] `vim`
 - [ ] `i3`
+- [ ] `picom`
 
 # Development
 - [x] Fetch config files
