@@ -16,7 +16,7 @@ alias ll='ls -lhFa --color=auto'
 alias ebash='(cd ~/; nvim .bashrc)'
 alias ebasha='(cd ~/; nvim .bash_aliases)'
 alias envim='(cd ~/.config/nvim; nvim)'
-alias ei3='(cd~/.config/i3; nvim config)'
+alias ei3='(cd ~/.config/i3; nvim config)'
 
 # Whatever
 alias weather='curl wttr.in'
