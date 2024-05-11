@@ -77,7 +77,7 @@ update_bash_config()
 update_nvim_config()
 {
   echo "Updateing nvim configs..."
-  cp -r ~/.config/nvim ./nvim
+  cp -r ~/.config/nvim ./
   echo "Updating complete."
 }
 
