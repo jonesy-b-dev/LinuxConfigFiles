@@ -53,7 +53,7 @@ install_bash_config()
 {
     echo "Installing bash config..."
     cp bash/.bashrc bash/.bash_aliases ~/
-    # Add commands to install bash config files here
+    echo "Bash configs installed, please run [source ~./.bashrc] to complete the setup."
 }
 
 # Function to install vim config
@@ -61,8 +61,7 @@ install_nvim_config()
 {
     echo "Installing nvim config..."
     cp -r nvim/ ~/.config/
-    echo "Bah configs installed, please run [source ~./bashrc] to complete the setup."
-    # Add commands to install vim config files here
+    echo "Installation complete."
 }
 
 update_bash_config()
