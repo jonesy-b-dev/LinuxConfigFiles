@@ -7,7 +7,7 @@ show_help(){
     echo "Avalible options.."
     echo "To install use option -i and to update the files in the repo use option -u."
     echo "-b    Install bash configs"
-    echo "-v    Install nvim configs"
+    echo "-n    Install nvim configs"
     echo "-h    Show help information"
 }
 
@@ -20,7 +20,7 @@ update_bash=false
 update_nvim=false
 
 # Parse cl option
-while getopts "iubvh" opt; do
+while getopts "iubnh" opt; do
 	case ${opt} in
     u)
         update=true  ;;
@@ -28,7 +28,7 @@ while getopts "iubvh" opt; do
         install=true  ;;
 		b) 
         install_bash=true ;;
-		v) 
+		n) 
         install_nvim=true ;;
     h) # Show help
         show_help ;;
@@ -90,8 +90,6 @@ install_configs()
     if $install_nvim; then
         install_nvim_config
     fi
-
-    # Add more config installation functions here as needed
 }
 
 update_configs()
@@ -104,8 +102,6 @@ update_configs()
     if $install_nvim; then
         update_nvim_config
     fi
-
-    # Add more config installation functions here as needed
 }
 
 # Check if we need to install or update and call according funciton
