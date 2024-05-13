@@ -67,9 +67,7 @@ install_nvim_config()
 update_bash_config()
 {
   echo "Updating bash configs... "
-  echo "Current changes so far since last commit in the repository"
   cp -r ~/.bashrc ~/.bash_aliases ./bash/
-  git diff ./bash/
   echo "Updating complete."
 }
 
@@ -104,10 +102,17 @@ update_configs()
     fi
 }
 
+show_repo_diff()
+{
+  echo "Current changes in the repo so far since last commit."
+  git diff
+}
+
 # Check if we need to install or update and call according funciton
 if $install; then
   install_configs
   
 else 
   update_configs
+  show_repo_diff
 fi
