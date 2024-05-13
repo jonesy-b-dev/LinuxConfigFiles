@@ -52,7 +52,7 @@ fi
 install_bash_config() 
 {
     echo "Installing bash config..."
-    cp bash/.bashrc bash/.bash_aliases ~/
+    cp .config/bash/.bashrc bash/.bash_aliases ~/
     echo "Bash configs installed, please run [source ~./.bashrc] to complete the setup."
 }
 
@@ -60,21 +60,21 @@ install_bash_config()
 install_nvim_config() 
 {
     echo "Installing nvim config..."
-    cp -r nvim/ ~/.config/
+    cp -r .congig/nvim/ ~/.config/
     echo "Installation complete."
 }
 
 update_bash_config()
 {
   echo "Updating bash configs... "
-  cp -r ~/.bashrc ~/.bash_aliases ./bash/
+  cp -r ~/.bashrc ~/.bash_aliases ./.config/bash/
   echo "Updating complete."
 }
 
 update_nvim_config()
 {
   echo "Updateing nvim configs..."
-  cp -r ~/.config/nvim ./
+  cp -r ~/.config/nvim ./.config/
   echo "Updating complete."
 }
 
