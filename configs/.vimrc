@@ -6,3 +6,6 @@ set relativenumber
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
+" Set tab distance to 4 spaces
+set shiftwidth=4
+set tabstop=4
