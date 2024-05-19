@@ -1,10 +1,11 @@
-[window]
-opacity = 0.8
-
+import = [
+	"~/.config/alacritty/themes/gruvbox_mod.toml"
+]
 [window.padding]
 x = 6
 y = 6
 
 [font.normal]
+#family = "JetBrainsMono Nerd Font"
 family = "Hurmit Nerd Font"
-style= "Regular"
+style = "Regular"
