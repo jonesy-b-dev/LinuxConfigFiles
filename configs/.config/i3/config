@@ -185,9 +185,9 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 ######################################################################
-###								   ###
-###			    CUSTOM CONFIGS			   ###
-###				 				   ###
+###								   								   ###
+###			    CUSTOM CONFIGS			   						   ###
+###				 				   								   ###
 ######################################################################
 
 # class                 border  backgr. text    indicator child_border
