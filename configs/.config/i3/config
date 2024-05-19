@@ -185,15 +185,15 @@ mode "resize" {
 bindsym $mod+r mode "resize"
 
 ######################################################################
-###								   								   ###
-###			    CUSTOM CONFIGS			   						   ###
-###				 				   								   ###
+###								   ###
+###			    CUSTOM CONFIGS			   ###
+###				 				   ###
 ######################################################################
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #fca103 #2e2b28 #c5c8c6 #fac53b   #fca103
-client.focused_inactive #ffffff #5f676a #c4c8c6 #484e50   #5f676a
-client.unfocused        #ffffff #282a2e #c3c8c6 #292d2e   #222222
+client.focused          #fca103 #2e2b28 #c5c8c6 #2e2b28   #2e2b28
+client.focused_inactive #ffffff #5f676a #c4c8c6 #484e50   #2e2b28
+client.unfocused        #ffffff #282a2e #c3c8c6 #292d2e   #2e2b28
 client.urgent           #ffffff #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
@@ -203,8 +203,9 @@ client.background       #ffffff
 focus_follows_mouse no
 
 # Remove top title bar
-default_border pixel 2
-#for_window [class="^.*"] border pixel 1
+default_border pixel 3
+#for_window [class="^.*"] border pixel 2
+
 
 # Add gaps between the windows
 gaps inner 4
