@@ -1,11 +1,15 @@
-" Set line numbers and relative lines
+" Set line numbers relative
 set number
 set relativenumber
 
-" Set cursor modes for diffrent modes
+" Cursor settings
 let &t_SI = "\e[6 q"
 let &t_EI = "\e[2 q"
 
-" Set tab distance to 4 spaces
+" Adjust tab spacing
 set shiftwidth=4
 set tabstop=4
+
+" Key remaps
+nnoremap <C-d> <C-d>zz
+nnoremap <C-u> <C-u>zz
