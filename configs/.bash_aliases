@@ -10,7 +10,6 @@ alias mem10='ps auxf | sort -nr -k 4 | head -10'
 alias mem5='ps auxf | sort -nr -k 4 | head -5'
 alias df='df -h'
 alias ll='ls -lhFa --color=auto'
-alias ll='ls -lhFa --color=auto'
 
 # Edit specific things
 alias ebash='(cd ~/; nvim .bashrc)'
@@ -21,7 +20,10 @@ alias ei3='(cd ~/.config/i3; nvim config)'
 # Whatever
 alias weather='curl wttr.in'
 alias reload='source ~/.bashrc'
+
+# Command extensions
 alias pinstall='sudo pacman -S'
+alias grep='grep --color=auto'
 
 # Git related aliases
 alias gs='git status'
