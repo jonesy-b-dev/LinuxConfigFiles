@@ -13,3 +13,5 @@ set tabstop=4
 " Key remaps
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
+nnoremap n nzzzv
+nnoremap N Nzzzv
