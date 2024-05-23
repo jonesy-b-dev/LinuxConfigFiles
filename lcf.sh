@@ -35,14 +35,20 @@ while getopts "iubnh" opt; do
 	esac
 done
 
+install_all_configs()
+{
+	echo "Installing all configs...."
+	sudo cp -rp ./configs/. ~
+}
+
 # If no options provided, exit the progra
 if [[ $# -eq 0 ]]; then
-  echo "Please provide an option, run ./install.sh -h to see all avalble options."
-  read -p "Press enter to continue..."
-  exit 1
-fi
+  	echo "Do you want to install all configs?"
+    read -p "Press enter to continue or ^C to cancle..."
+	install_all_configs
+  	exit 1
 
-if [[($install == true && $update == true) || ( $install == false && $update == false) ]]; then
+elif [[($install == true && $update == true) || ( $install == false && $update == false) ]]; then
   echo "You must either provide the -i or -u option, not both of neither."
   read -p "Press enter to continue..."
   exit 1
@@ -107,6 +113,7 @@ show_repo_diff()
   echo "Current changes in the repo so far since last commit."
   git diff
 }
+
 
 # Check if we need to install or update and call according funciton
 if $install; then
