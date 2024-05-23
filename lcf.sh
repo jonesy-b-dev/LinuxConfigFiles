@@ -39,6 +39,20 @@ install_all_configs()
 {
 	echo "Installing all configs...."
 	sudo cp -rp ./configs/. ~
+	echo "Instalation complete."
+}
+
+update_all_configs()
+{
+	echo "Updatating all configs in the repo..."
+	
+	mapfile -t configsLc < <(ls configs/.config)
+	mapfile -t configsEx < <(ls ~/.config)
+
+	echo "Local configs"
+		for conf in "${configsLc[@]}"; do
+		cp -r ~/.config/$conf .config/.config
+	done
 }
 
 # If no options provided, exit the progra
