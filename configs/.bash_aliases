@@ -24,6 +24,7 @@ alias reload='source ~/.bashrc'
 # Command extensions
 alias pinstall='sudo pacman -S'
 alias grep='grep --color=auto'
+alias shutdown='shutdown -h now'
 
 # Git related aliases
 alias gs='git status'
