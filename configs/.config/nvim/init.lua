@@ -12,3 +12,9 @@ vim.opt.tabstop = 4
 
 -- Set terminal colors
 vim.opt.tgc = false
+
+-- Turn on syntax highlighting
+vim.api.nvim_create_autocmd("VimEnter", {
+  pattern = "*",
+  command = "TMEnable highlight"
+})
