@@ -51,6 +51,9 @@ tiling_drag modifier titlebar
 # start a terminal
 bindsym $mod+Return exec alacritty 
 
+# lock the screen
+bindsym $mod+p exec i3lock
+
 # kill focused window
 bindsym $mod+Shift+q kill
 
