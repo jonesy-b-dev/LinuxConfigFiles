@@ -29,8 +29,8 @@ Next I can fetch the repository on another system and install the configs.
 - [x] Fetch config files
 - [x] Install config files
 - [x] Show help
-- [ ] Install all confgs with 1 option
-- [ ] Fetch all configs with 1 option
+- [x] Install all confgs with 1 option
+- [x] Fetch all configs with 1 option
 - [ ] Translate to `c/cpp`?
 - [ ] Add custom directories
 - [ ] Show all current tracking direcories
