@@ -16,5 +16,5 @@ vim.opt.tgc = false
 -- Turn on syntax highlighting
 vim.api.nvim_create_autocmd("VimEnter", {
   pattern = "*",
-  command = "TMEnable highlight"
+  command = "TSEnable highlight"
 })
