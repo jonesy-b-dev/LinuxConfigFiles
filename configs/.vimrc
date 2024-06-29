@@ -10,6 +10,11 @@ let &t_EI = "\e[2 q"
 set shiftwidth=4
 set tabstop=4
 
+" Set search options
+set ignorecase = true 
+set smartcase = true 
+set inccommand = "split" 
+
 " Key remaps
 nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
