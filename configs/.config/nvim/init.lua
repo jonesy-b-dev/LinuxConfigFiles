@@ -13,6 +13,11 @@ vim.opt.tabstop = 4
 -- Set terminal colors
 vim.opt.tgc = false
 
+-- Set search options
+vim.opt.ignorecase = true 
+vim.opt.smartcase = true -- search matters if capital letter
+vim.opt.inccommand = "split" -- "for incsearch while sub
+
 -- Turn on syntax highlighting
 vim.api.nvim_create_autocmd("VimEnter", {
   pattern = "*",
