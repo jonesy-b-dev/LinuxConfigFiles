@@ -4,7 +4,7 @@ return {
 	{ 
 		'nvim-lua/plenary.nvim',
 		{ "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
-		"nvim-tree.nvim/nvim-web-devicons",
+		"nvim-tree/nvim-web-devicons",
 	},
 	config = function()
 	    require("telescope").load_extension("fzf")
