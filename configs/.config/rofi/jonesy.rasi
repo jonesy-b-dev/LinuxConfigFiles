@@ -5,7 +5,7 @@
  */
 
 * {
-    foreground:  #2e2b28;
+    foreground:  #303030;
     backlight:   #ccffeedd;
     background-color:  transparent;
     dark: #1c1c1c;
@@ -72,7 +72,7 @@ mainbox {
 message {
     border-color: @foreground;
     border:  0px 2px 2px 2px;
-//    border-radius: 4px;
+	//border-radius: 4px;
     padding: 5;
     background-color: @tcyan;
 }
@@ -89,13 +89,16 @@ inputbar {
     border-color: @foreground;
     font: "Hermit Nerd Font";
 }
+
 entry,prompt,case-indicator {
     text-font: inherit;
     text-color:#c5c8c6;
 }
+
 prompt {
     margin:     0px 0.3em 0em 0em ;
 }
+
 listview {
     padding: 8px;
     border-radius: 0px 0px 4px 4px;
@@ -105,6 +108,7 @@ listview {
     dynamic: false;
     lines: 10;
 }
+
 element {
     padding: 4px;
     vertical-align: 0.5;
@@ -113,18 +117,33 @@ element {
     background-color: transparent;
     color: @foreground;
     font:inherit;
+    text-color: #c5c8c6;
 }
+
 element-text {
     background-color: inherit;
-    text-color:       #c5c8c6;
+	text-color: #8f8882;
+}
+element selected {
+	text-color: @black;
 }
 element selected.normal {
     background-color: @orange;
-    text-color: @foreground;
+    text-color: @black;
 }
+element selected active {
+    background-color: @lightblue;
+    foreground: @black;
+}
+
+element selected urgent {
+    background-color: @lightred;
+}
+
 element normal active {
     foreground: @lightblue;
 }
+
 element normal urgent {
     foreground: @lightred;
 }
@@ -135,14 +154,6 @@ element alternate active {
 }
 element alternate urgent {
     foreground: @lightred;
-}
-element selected active {
-    background-color: @lightblue;
-    foreground: @foreground;
-}
-element selected urgent {
-    background-color: @lightred;
-    foreground: @foreground;
 }
 element normal normal {
 
