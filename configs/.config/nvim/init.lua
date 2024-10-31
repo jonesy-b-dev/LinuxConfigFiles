@@ -23,3 +23,6 @@ vim.api.nvim_create_autocmd("VimEnter", {
   pattern = "*",
   command = "TSEnable highlight"
 })
+
+-- Turn off showmode (because lualine shows it)
+vim.opt.showmode = false
