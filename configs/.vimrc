@@ -11,9 +11,8 @@ set shiftwidth=4
 set tabstop=4
 
 " Set search options
-set ignorecase = true 
-set smartcase = true 
-set inccommand = "split" 
+set ignorecase
+set smartcase 
 
 " Key remaps
 nnoremap <C-d> <C-d>zz
