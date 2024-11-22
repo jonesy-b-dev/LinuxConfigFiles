@@ -24,5 +24,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
   command = "TSEnable highlight"
 })
 
+vim.cmd([[colorscheme gruvbox]])
+
 -- Turn off showmode (because lualine shows it)
 vim.opt.showmode = false
