@@ -11,3 +11,7 @@ style = "Regular"
 import = [
 	"~/.config/alacritty/themes/gruvbox_mod.toml"
 ]
+
+[terminal]
+[terminal.shell]
+  program = "/usr/bin/zsh"
