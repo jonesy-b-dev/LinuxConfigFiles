@@ -19,6 +19,9 @@ nnoremap <C-d> <C-d>zz
 nnoremap <C-u> <C-u>zz
 nnoremap n nzzzv
 nnoremap N Nzzzv
+" Center when jumping to marker
+nnoremap ` :execute "normal! `".nr2char(getchar())."zz"<CR>
+nnoremap ' :execute "normal! '".nr2char(getchar())."zz"<CR>
 
 " Enable syntaxhighlighting
 syntax on
