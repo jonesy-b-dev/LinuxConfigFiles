@@ -1,39 +1,28 @@
-# LCF (Linux Config Files)
-LCF is an open source Linux config installer to easily sync your Linux config files between devices.
+# My personal conmfig files for linux
+These are really ALL of them, for x11 stuff and wayland stuff and more
+Feel free to use them!
 
-> Warning: this application is in early development and a lot of features still need to be developed. At the moment it is usable but quite limited in features.
+### Editors
+[x] Vim
+[x] NeoVim
 
-## How to use LCF
-If you want to use this for own use, its the best to fork the repo. 
+## Terminals
+[x] Foot
+[x] Alacritty
 
-When forked and cloned first empty the `./bash` and `./nvim` directories in the repository.
+### Wayland
+[x] Hyprland
+[x] Hyprlock
+[x] Hyprpaper
+[x] Waybar  
+[x] Sway
+            
+### X11    
+[x] i3      
+[x] Polybar    
+[x] Picom       
 
-Run `./lcf -ubv` (Update Bash Neovim) to fetch the config files from your system and put them in the repository.
-
-Run `./lcf -ibc` (Install Bash Neovim) to install the config files form the repo to the default locations of the config.
-
-## Usecases
-Personally I use multible Linux systems. I use this to easily always have the same configs.
-I can make changes on any device, fetch the changes with LCF and push them to GitHub.
-
-Next I can fetch the repository on another system and install the configs.
-
-## Current config support
-- [x] `bash`
-- [x] `neovim`
-- [ ] `vim`
-- [ ] `i3`
-- [ ] `picom`
-
-# Development
-- [x] Fetch config files
-- [x] Install config files
-- [x] Show help
-- [x] Install all confgs with 1 option
-- [x] Fetch all configs with 1 option
-- [ ] Translate to `c/cpp`?
-- [ ] Add custom directories
-- [ ] Show all current tracking direcories
-- [ ] GUI version?
-
-> WARNING: this overwrites any existing config files so be carefull and backup existing config files first
+### Other
+[x] Rofi      
+[x] bash    
+[x] zhs
