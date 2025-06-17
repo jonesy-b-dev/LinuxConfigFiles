@@ -1,28 +1,28 @@
 # My personal conmfig files for linux
-These are really ALL of them, for X11 stuff and wayland stuff and more
+These are really ALL of them, for x11 stuff and wayland stuff and more
 Feel free to use them!
 
 ### Editors
-[*] Vim
-[*] NeoVim
+- [x] Vim
+- [x] NeoVim
 
 ## Terminals
-[*] Foot
-[*] Alacritty
+- [x] Foot
+- [x] Alacritty
 
 ### Wayland
-[*] Hyprland
-[*] Hyprlock
-[*] Hyprpaper
-[*] Waybar  
-[*] Sway
+- [x] Hyprland
+- [x] Hyprlock
+- [x] Hyprpaper
+- [x] Waybar  
+- [x] Sway
             
 ### X11    
-[*] i3      
-[*] Polybar    
-[*] Picom       
+- [x] i3      
+- [x] Polybar    
+- [x] Picom       
 
 ### Other
-[*] Rofi      
-[*] bash    
-[*] zhs
+- [x] Rofi      
+- [x] bash    
+- [x] zhs
