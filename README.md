@@ -1,4 +1,4 @@
-# My personal conmfig files for linux
+# My personal config files for linux
 These are really ALL of them, for x11 stuff and wayland stuff and more
 Feel free to use them!
 
