@@ -6,7 +6,7 @@ Feel free to use them!
 * [Vim](https://github.com/jonesy-b-dev/LinuxConfigFiles/blob/main/.vimrc)
 * [NeoVim](https://github.com/jonesy-b-dev/LinuxConfigFiles/tree/main/.config/nvim)
 
-## Terminals
+### Terminals
 * [Foot](https://github.com/jonesy-b-dev/LinuxConfigFiles/blob/main/.config/foot/foot.ini)
 * [Alacritty](https://github.com/jonesy-b-dev/LinuxConfigFiles/tree/main/.config/alacritty)
 * [Tmux](https://github.com/jonesy-b-dev/LinuxConfigFiles/blob/main/.tmux.conf)
