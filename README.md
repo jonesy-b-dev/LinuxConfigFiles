@@ -2,6 +2,9 @@
 These are really ALL of them, for x11 stuff and wayland stuff and more
 Feel free to use them!
 
+## Showcase
+![Showcase image](data/showcase.png)
+
 ### Editors
 * [Vim](https://github.com/jonesy-b-dev/LinuxConfigFiles/blob/main/.vimrc)
 * [NeoVim](https://github.com/jonesy-b-dev/LinuxConfigFiles/tree/main/.config/nvim)
