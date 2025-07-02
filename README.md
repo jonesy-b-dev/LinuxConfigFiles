@@ -9,6 +9,7 @@ Feel free to use them!
 ## Terminals
 * Foot
 * Alacritty
+* Tmux
 
 ### Wayland
 * Hyprland
