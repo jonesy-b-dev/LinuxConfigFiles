@@ -214,6 +214,6 @@ default_border pixel 3
 gaps inner 4
 
 # Execute some stuff
-exec_always feh --bg-fill ~/.config/i3/0_0.jpg
+exec_always feh --bg-fill ~/.config/backgrounds/background.jpg
 exec_always ~/.config/polybar/launch.sh 
 exec_always picom
