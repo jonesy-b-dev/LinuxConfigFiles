@@ -19,6 +19,7 @@ alias ebasha='(cd ~/; nvim .bash_aliases)'
 alias envim='(cd ~/.config/nvim; nvim)'
 alias ei3='(cd ~/.config/i3; nvim config)'
 alias econf='(cd ~/.config; nvim)'
+alias edisc='sudo nvim /opt/discord/resources/build_info.json'
 
 # Whatever
 alias weather='curl wttr.in'
