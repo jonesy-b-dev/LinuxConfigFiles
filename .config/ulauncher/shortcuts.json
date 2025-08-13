@@ -1,0 +1,61 @@
+{
+  "48c83eiqo6jxh5gqamr2": {
+    "added": 1754927568,
+    "cmd": "https://www.google.com/maps/search/%s",
+    "icon": "~/Pictures/Icons/google-map-icon.png",
+    "id": "48c83eiqo6jxh5gqamr2",
+    "is_default_search": false,
+    "keyword": "maps",
+    "name": "Maps",
+    "run_without_argument": false
+  },
+  "googlesearch": {
+    "added": 1754923568,
+    "cmd": "https://google.com/search?q=%s",
+    "icon": "/usr/share/ulauncher/icons/google-search.png",
+    "id": "googlesearch",
+    "is_default_search": true,
+    "keyword": "google",
+    "name": "Google Search",
+    "run_without_argument": false
+  },
+  "k4b957bp46z7kauobzs8": {
+    "added": 1754925923,
+    "cmd": "https://jonesyb.com",
+    "id": "k4b957bp46z7kauobzs8",
+    "is_default_search": false,
+    "keyword": "jonesy",
+    "name": "Portfolio",
+    "run_without_argument": true
+  },
+  "stackoverflow": {
+    "added": 1754923568,
+    "cmd": "https://stackoverflow.com/search?q=%s",
+    "icon": "/usr/share/ulauncher/icons/stackoverflow.svg",
+    "id": "stackoverflow",
+    "is_default_search": false,
+    "keyword": "so",
+    "name": "Stack Overflow",
+    "run_without_argument": false
+  },
+  "tm12663g42pas34nszmf": {
+    "added": 1754924859,
+    "cmd": "https://search.brave.com/search?q=%s",
+    "icon": "~/Pictures/Icons/Brave_icon_lionface.png",
+    "id": "tm12663g42pas34nszmf",
+    "is_default_search": true,
+    "keyword": "b",
+    "name": "Brave",
+    "run_without_argument": false
+  },
+  "wikipedia": {
+    "added": 1754923568,
+    "cmd": "https://en.wikipedia.org/wiki/%s",
+    "icon": "/usr/share/ulauncher/icons/wikipedia.png",
+    "id": "wikipedia",
+    "is_default_search": true,
+    "keyword": "wiki",
+    "name": "Wikipedia",
+    "run_without_argument": false
+  }
+}

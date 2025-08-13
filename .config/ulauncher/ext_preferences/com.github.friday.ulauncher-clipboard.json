@@ -1,0 +1,11 @@
+{
+    "preferences": {
+        "manager": "CopyQ",
+        "max_lines": "20"
+    },
+    "triggers": {
+        "copy": {
+            "keyword": "c"
+        }
+    }
+}
