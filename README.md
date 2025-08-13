@@ -26,7 +26,13 @@ Feel free to use them!
 * [Polybar](https://github.com/jonesy-b-dev/LinuxConfigFiles/tree/main/.config/polybar)
 * [Picom](https://github.com/jonesy-b-dev/LinuxConfigFiles/blob/main/.config/picom/picom.conf)
 
-### Other
+### Launchers
 * [Rofi](https://github.com/jonesy-b-dev/LinuxConfigFiles/tree/main/.config/rofi)
+* [ulauncher](https://github.com/jonesy-b-dev/LinuxConfigFiles/tree/main/.config/ulauncher)
+
+## Shells
 * [bash](https://github.com/jonesy-b-dev/LinuxConfigFiles/blob/main/.bashrc)
 * [zhs](https://github.com/jonesy-b-dev/LinuxConfigFiles/blob/main/.zshrc)
+
+## Other
+* [dunst](https://github.com/jonesy-b-dev/LinuxConfigFiles/tree/main/.config/dunst/dunstrc)
