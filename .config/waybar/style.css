@@ -4,6 +4,8 @@
 	margin-top: 1px;
 }
 
+#window{
+}
 window#waybar {
 	background: rgba(0,0,0,0);
 	/*background: #292b2e;*/
@@ -22,12 +24,30 @@ window#waybar {
 }
 
 #workspaces,
-#clock.1,
-#clock.2,
-#clock.3,
+#clock.1 {
+	padding-right: 9px;
+	background: #1a1a1a;
+	color: #d79921;
+}
+#clock.2 {
+	padding-right: 9px;
+	background: #1a1a1a;
+	color: #d79921;
+}
+#clock.3 {
+	padding-right: 9px;
+	background: #1a1a1a;
+	color: #d79921;
+}
 #pulseaudio,
 #memory,
 #cpu,
+#network{
+	color: #b8bb26;
+	background: #1a1a1a;
+	padding-left: 7px;
+	padding-right: 1px;
+}
 #battery,
 #disk,
 #tray {
@@ -35,11 +55,12 @@ window#waybar {
 }
 
 #workspaces button {
-	padding: 0 4px;
+	padding: 0 3px;
 	color: #fdf6e3;
 }
 #workspaces button.focused {
 	color: #268bd2;
+	background: #ffffff;
 }
 #workspaces button:hover {
 	box-shadow: inherit;
@@ -48,7 +69,20 @@ window#waybar {
 #workspaces button:hover {
 	background: #292b2e;
 	border: #1a1a1a;
-	padding: 0 3px;
+	padding: 0 4px;
+}
+
+#workspaces button.active{
+	color: #d79921;
+}
+
+#temperature {
+	background: #1a1a1a;
+	color: #e6d8c8;
+}
+
+#temperature.critical{
+	color: #fb4934;
 }
 
 #wireplumber {

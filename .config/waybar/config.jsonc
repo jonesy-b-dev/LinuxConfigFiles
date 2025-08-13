@@ -1,5 +1,4 @@
 // -*- mode: json -*-
-
 {
 	"layer": "top",
 	"position": "top",
@@ -10,6 +9,9 @@
 	],
 	"modules-center": [
 		"custom/left-arrow-dark",
+		"temperature",
+		"custom/right-arrow-dark",
+		"custom/left-arrow-dark",
 		"clock#1",
 		"custom/right-arrow-dark",
 		"custom/left-arrow-dark",
@@ -17,6 +19,9 @@
 		"custom/right-arrow-dark",
 		"custom/left-arrow-dark",
 		"clock#3",
+		"custom/right-arrow-dark",
+		"custom/left-arrow-dark",
+		"temperature#gpu",
 		"custom/right-arrow-dark"
 	],
 	"modules-right": [
@@ -30,7 +35,7 @@
 		"cpu",
 		"custom/right-arrow-dark",
 		"custom/left-arrow-dark",
-		"battery",
+		"network",
 		"custom/right-arrow-dark",
 		"custom/left-arrow-dark",
 		"disk",
@@ -61,6 +66,23 @@
 		"format": "{name}"
 	},
 
+	"temperature": {
+		"thermal-zone": 2,
+	 	"hwmon-path": ["/sys/class/hwmon/hwmon2/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
+	 	"critical-threshold": 80,
+		"format": "   {temperatureC}°C ",
+		"format-critical": " !  {temperatureC}°C "
+	},
+
+	"temperature#gpu": {
+		"thermal-zone": 2,
+	 	"hwmon-path": ["/sys/class/hwmon/hwmon6/temp1_input", "/sys/class/thermal/thermal_zone0/temp"],
+	 	"critical-threshold": 80,
+		"format": "   {temperatureC}°C ",
+		"format-critical": " !  {temperatureC}°C "
+	},
+
+
 	"clock#1": {
 		"format": "{:%a}",
 		"tooltip": false
@@ -70,7 +92,7 @@
 		"tooltip": false
 	},
 	"clock#3": {
-		"format": "{:%m-%d}",
+		"format": "{:%d-%m}",
 		"tooltip": false
 	},
 	"wireplumber": {
@@ -97,6 +119,11 @@
 		"interval": 5,
 		"format": " {usage:2}%"
 	},
+	"network": {
+		"format-ethernet": "\uef44 ",
+		"format-disconnected": "\uea87 ",
+		"format-wifi": "\uf1eb "
+	},
 	"battery": {
 		"states": {
 			"good": 95,
@@ -114,7 +141,7 @@
 	},
 	"disk": {
 		"interval": 5,
-		"format": " {percentage_used:2}%",
+		"format": "\uf0c7 {percentage_used:2}%",
 		"path": "/"
 	},
 	"tray": {
