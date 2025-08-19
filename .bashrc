@@ -22,7 +22,7 @@ PROMPT_COMMAND='history -a'
 # Ignore case on auto-complete
 if [[ $iatest -gt 0 ]]; then bind "set completion-ignore-case on"; fi #TODO look into this
 
-PROMPT_COMMAND='PS1_CMD1=$(git branch 2>/dev/null | rg '^\*' | colrm 1 2)'; PS1='[\[\e[1;33m\]\A\[\e[0m\]](${PS1_CMD1})\[\e[32m\]\u\[\e[0m\]:\[\e[0;35m\]\w\[\e[0m\]\\$ '
+PS1='[\[\e[1;33m\]\A\[\e[0m\]]($(git branch 2>/dev/null | rg "^\*" | colrm 1 2))\[\e[32m\]\u\[\e[0m\]:\[\e[0;35m\]\w\[\e[0m\]\\$ '
 
 # Default editor
 export EDITOR=nvim
