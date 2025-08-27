@@ -117,12 +117,14 @@
 	},
 	"cpu": {
 		"interval": 5,
-		"format": " {usage:2}%"
+		"format": " {usage:2}%",
+		"on-click": "foot -e btop"
 	},
 	"network": {
 		"format-ethernet": "\uef44 ",
 		"format-disconnected": "\uea87 ",
-		"format-wifi": "\uf1eb "
+		"format-wifi": "\uf1eb ",
+		"on-click": "foot -e impala"
 	},
 	"battery": {
 		"states": {
@@ -142,7 +144,8 @@
 	"disk": {
 		"interval": 5,
 		"format": "\uf0c7 {percentage_used:2}%",
-		"path": "/"
+		"path": "/",
+		"on-click": "nemo"
 	},
 	"tray": {
 		"icon-size": 20,
