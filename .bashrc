@@ -41,3 +41,7 @@ export LESS_TERMCAP_us=$'\E[01;32m'
 
 # Rust thingy
 . "$HOME/.cargo/env"
+
+# Tmux sessionizer
+PATH="$PATH":"$HOME/.local/scripts/"
+bind '"\C-a\C-f":"tmux-sessionizer\n"'
