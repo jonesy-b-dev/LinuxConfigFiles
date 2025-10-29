@@ -45,7 +45,9 @@ alias rm='trash -v'
 alias tree='tree -CAhF --dirsfirst'
 alias ll='ls -lhFa --color=auto'
 
-# Git related aliases
+# Short commands
+alias noc='notecross'
+# Git
 alias gs='git status'
 alias ga='git add'
 alias gaa='git add --all'
