@@ -1,5 +1,5 @@
 * {
-	font-size: 19px;
+	font-size: 13px;
 	font-family: monospace;
 	margin-top: 1px;
 }
@@ -15,12 +15,12 @@ window#waybar {
 #custom-right-arrow-dark{
 	color: #1a1a1a;
 	/*text-shadow: 3px 0px #292b2e;*/
-	font-size: 25px;
+	font-size: 22px;
 }
 #custom-left-arrow-dark {
 	color: #1a1a1a;
 	/*text-shadow: -3px 0px #292b2e;*/
-	font-size: 25px;
+	font-size: 22px;
 }
 
 #workspaces,
