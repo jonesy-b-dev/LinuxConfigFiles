@@ -32,6 +32,9 @@ Feel free to use them!
 
 ## Shells
 * [bash](https://github.com/jonesy-b-dev/LinuxConfigFiles/blob/main/.bashrc)
+
+## Other
+* [Fastfetch](https://github.com/jonesy-b-dev/LinuxConfigFiles/blob/main/fastfetch/config.jsonc)
 * [zhs](https://github.com/jonesy-b-dev/LinuxConfigFiles/blob/main/.zshrc)
 
 ## Other
