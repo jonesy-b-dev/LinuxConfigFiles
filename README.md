@@ -36,6 +36,4 @@ Feel free to use them!
 ## Other
 * [Fastfetch](https://github.com/jonesy-b-dev/LinuxConfigFiles/blob/main/fastfetch/config.jsonc)
 * [zhs](https://github.com/jonesy-b-dev/LinuxConfigFiles/blob/main/.zshrc)
-
-## Other
 * [dunst](https://github.com/jonesy-b-dev/LinuxConfigFiles/tree/main/.config/dunst/dunstrc)
