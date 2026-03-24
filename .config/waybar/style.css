@@ -1,112 +1,42 @@
+@import "theme.css";
+
 * {
-	font-size: 13px;
-	font-family: monospace;
-	margin-top: 1px;
+	all: initial; /* Reset GTK theme */
+	color: @main-fg;
 }
 
-#window{
-}
-window#waybar {
-	background: rgba(0,0,0,0);
-	/*background: #292b2e;*/
-	color: #fdf6e3;
+@import "styles/fonts.css";
+@import "styles/modules-center.css";
+@import "styles/modules-left.css";
+@import "styles/modules-right.css";
+@import "styles/states.css";
+
+.module {
+	margin-bottom: -1px;
 }
 
-#custom-right-arrow-dark{
-	color: #1a1a1a;
-	/*text-shadow: 3px 0px #292b2e;*/
-	font-size: 22px;
+#waybar {
+	background-color: @outline;
 }
-#custom-left-arrow-dark {
-	color: #1a1a1a;
-	/*text-shadow: -3px 0px #292b2e;*/
-	font-size: 22px;
+#waybar > box {
+	margin: 4px;
 }
 
-#workspaces,
-#clock.1 {
-	padding-right: 9px;
-	background: #1a1a1a;
-	color: #d79921;
+button {
+	border-radius: 16px;
+	min-width: 16px;
+	padding: 0 6px;
 }
-#clock.2 {
-	padding-right: 9px;
-	background: #1a1a1a;
-	color: #d79921;
-}
-#clock.3 {
-	padding-right: 9px;
-	background: #1a1a1a;
-	color: #d79921;
-}
-#pulseaudio,
-#memory,
-#cpu,
-#network{
-	color: #b8bb26;
-	background: #1a1a1a;
-	padding-left: 7px;
-	padding-right: 1px;
-}
-#battery,
-#disk,
-#tray {
-	background: #1a1a1a;
+button:hover {
+	background-color: @hover-bg;
+	color: @hover-fg;
 }
 
-#workspaces button {
-	padding: 0 3px;
-	color: #fdf6e3;
+tooltip {
+	border: 2px solid @main-br;
+	border-radius: 10px;
+	background-color: @tooltip;
 }
-#workspaces button.focused {
-	color: #268bd2;
-	background: #ffffff;
-}
-#workspaces button:hover {
-	box-shadow: inherit;
-	text-shadow: inherit;
-}
-#workspaces button:hover {
-	background: #292b2e;
-	border: #1a1a1a;
-	padding: 0 4px;
-}
-
-#workspaces button.active{
-	color: #d79921;
-}
-
-#temperature {
-	background: #1a1a1a;
-	color: #e6d8c8;
-}
-
-#temperature.critical{
-	color: #fb4934;
-}
-
-#wireplumber {
-	color: #268bd2;
-	background: #1a1a1a;
-}
-#memory {
-	color: #2aa198;
-}
-#cpu {
-	color: #6c71c4;
-}
-#battery {
-	color: #859900;
-}
-#disk {
-	color: #b58900;
-}
-
-#clock,
-#pulseaudio,
-#memory,
-#cpu,
-#battery,
-#disk {
-	padding: 0 10px;
+tooltip > box {
+	padding: 0 6px;
 }

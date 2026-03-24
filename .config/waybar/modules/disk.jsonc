@@ -1,0 +1,12 @@
+{
+	"disk": {
+		"interval": 5,
+		"format": "\uf0c7 {percentage_used:2}%",
+		"path": "/",
+		"on-click": "nemo"
+	},
+	"tray": {
+		"icon-size": 20,
+		"spacing": 5
+	}
+}
