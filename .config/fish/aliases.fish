@@ -39,6 +39,7 @@ function edisc
 end
 
 # Whatever
+alias vencord='yes | sh -c "$(curl -sS https://vencord.dev/install.sh)"'
 alias weather='curl wttr.in'
 alias reload-bash='source ~/.bashrc'
 alias reload-waybar='pkill waybar && hyprctl dispatch exec waybar'
@@ -58,12 +59,20 @@ end
 alias shutdown='shutdown -h now'
 alias cp='cp -i'
 alias mv='mv -i'
-alias rm='trash -v'
+
+if command -v trash &> /dev/null;
+	alias rm='trash -v'
+else
+	echo 'trash not installed'
+end
 alias tree='tree -CAhF --dirsfirst'
 alias ll='ls -lhFa --color=auto'
 
 # Short commands
 alias noc='notecross'
+alias start-kali='qemu-system-x86_64 -m 16192 -cpu host -enable-kvm -smp cores=8 -net nic,model=virtio-net-pci,macaddr=de:ad:be:e5:34:56 -net user,id=mynet0,net=192.168.76.0/24,dhcpstart=192.168.76.9 -drive file=~/VirtualMachines/ISO/kali-linux-2025.4-qemu-amd64.qcow2,index=0,media=disk,if=virtio,format=qcow2'
+alias ff='fastfetch'
+
 # Git
 alias gs='git status'
 alias ga='git add'
@@ -75,4 +84,3 @@ alias gd='git diff'
 alias gps='git push'
 alias gf='git fetch'
 alias gp='git pull'
-
