@@ -1,6 +1,7 @@
 # My personal config files for linux
-These are really ALL of them, for x11 stuff and wayland stuff and more
-Feel free to use them!
+These are all of my config file I've used, this includes both X11 confs and and Wayland stuff and much more
+The Wayland confs (Hyprland) is what I use now and is most updated and useable.
+Feel free to use anything you like!
 
 ## Showcase
 ![Showcase image](data/showcase.png)
@@ -32,8 +33,9 @@ Feel free to use them!
 
 ## Shells
 * [bash](https://github.com/jonesy-b-dev/LinuxConfigFiles/blob/main/.bashrc)
+* [fish](https://github.com/jonesy-b-dev/LinuxConfigFiles/tree/main/.config/fish)
+* [zhs](https://github.com/jonesy-b-dev/LinuxConfigFiles/blob/main/.zshrc)
 
 ## Other
 * [Fastfetch](https://github.com/jonesy-b-dev/LinuxConfigFiles/blob/main/fastfetch/config.jsonc)
-* [zhs](https://github.com/jonesy-b-dev/LinuxConfigFiles/blob/main/.zshrc)
 * [dunst](https://github.com/jonesy-b-dev/LinuxConfigFiles/tree/main/.config/dunst/dunstrc)
