@@ -8,7 +8,7 @@ Feel free to use anything you like!
 
 ### Editors
 * [Vim](https://github.com/jonesy-b-dev/LinuxConfigFiles/blob/main/.vimrc)
-* [NeoVim](https://github.com/jonesy-b-dev/LinuxConfigFiles/tree/main/.config/nvim)
+* [NeoVim](http://github.com/jonesy-b-dev/JonnyVim) (Submodule)
 
 ### Terminals
 * [Foot](https://github.com/jonesy-b-dev/LinuxConfigFiles/blob/main/.config/foot/foot.ini)
