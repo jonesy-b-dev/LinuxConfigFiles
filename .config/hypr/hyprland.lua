@@ -49,6 +49,7 @@ hl.env("HYPRCURSOR_SIZE", "24")
 hl.config({ ecosystem = { enforce_permissions = true } })
 hl.permission("/usr/(bin|local/bin)/grim", "screencopy", "allow")
 hl.permission("/usr/bin/hyprpm", "plugin", "allow")
+hl.permission("/usr/(bin|local/bin)", "screencopy", "allow")
 
 
 -- LOOK AND FEEL
