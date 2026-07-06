@@ -1,5 +1,4 @@
 # cd related aliases
-alias nigger='echo I HATE NIGGERS'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
