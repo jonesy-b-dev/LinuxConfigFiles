@@ -38,7 +38,21 @@ else
 	echo 'rg not installed'
 	alias grep='grep --color=auto'
 fi
-alias shutdown='shutdown -h now'
+shutdown() {
+    if [ -z "$HYPRLAND_INSTANCE_SIGNATURE" ]; then
+        command shutdown -h now "$@"
+    else
+        hyprshutdown -t 'Shutting down...' --post-cmd 'shutdown -P 0'
+    fi
+}
+
+reboot() {
+    if [ -z "$HYPRLAND_INSTANCE_SIGNATURE" ]; then
+        command reboot "$@"
+    else
+        hyprshutdown -t 'Restarting...' --post-cmd 'reboot'
+    fi
+}
 alias cp='cp -i'
 alias mv='mv -i'
 alias rm='trash -v'
