@@ -45,12 +45,12 @@ hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme \"prefer-dar
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
 
--- PERMISSIONS
+-- PERMISSIONS https://wiki.hypr.land/Configuring/Advanced-and-Cool/Permissions/
 hl.config({ ecosystem = { enforce_permissions = true } })
 hl.permission("/usr/(bin|local/bin)/grim", "screencopy", "allow")
 hl.permission("/usr/bin/hyprpm", "plugin", "allow")
-hl.permission("/usr/(bin|local/bin)", "screencopy", "allow")
-
+hl.permission("/usr/(bin|local/bin)/hyprlock", "screencopy", "allow")
+hl.permission("/usr/(bin|local/bin)/hyprpicker", "screencopy", "allow")
 
 -- LOOK AND FEEL
 require("hyprland-lua.hyprLookAndFeel")
