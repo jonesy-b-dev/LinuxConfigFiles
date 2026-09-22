@@ -1,0 +1,182 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+script_path=$(readlink -f "$(command -v "$0")")
+
+list_packages()
+{
+    local repo_packages
+    local aur_packages
+
+    repo_packages=$(pacman -Sl | awk '/\[installed/ {
+        printf "\033[36m%s\033[0m %s %s\n", toupper($1), $2, $3
+    }')
+
+    aur_packages=$(pacman -Qm 2>/dev/null | awk '{
+        printf "\033[35mAUR\033[0m %s %s\n", $1, $2
+    }' || true)
+
+    printf "%s\n%s\n" "$repo_packages" "$aur_packages"
+}
+
+show_details()
+{
+    pacman -Qi "$1"
+}
+
+total_installed_size()
+{
+    pacman -Qi | awk '
+        /^Installed Size/ {
+            size = $4
+            unit = $5
+
+            if (unit == "KiB") { size *= 1024 }
+            else if (unit == "MiB") { size *= 1024 * 1024 }
+            else if (unit == "GiB") { size *= 1024 * 1024 * 1024 }
+
+            total += size
+        }
+        END { printf "%.0f\n", total }
+    '
+}
+
+selected_packages_size()
+{
+    pacman -Qi "$@" | awk '
+        /^Installed Size/ {
+            size = $4
+            unit = $5
+
+            if (unit == "KiB") { size *= 1024 }
+            else if (unit == "MiB") { size *= 1024 * 1024 }
+            else if (unit == "GiB") { size *= 1024 * 1024 * 1024 }
+
+            total += size
+        }
+        END { printf "%.0f\n", total }
+    '
+}
+
+remove_package()
+{
+    local confirmation
+    local size_before
+    local size_after
+    local size_freed
+    local estimated_size
+
+    estimated_size=$(selected_packages_size "$1")
+    echo "This will free approximately $(numfmt --to=iec --suffix=B "$estimated_size")"
+
+    read -rp "Remove $1? [y/N] " confirmation
+
+    if [[ "$confirmation" == "y" || "$confirmation" == "Y" ]]
+    then
+        size_before=$(total_installed_size)
+        sudo pacman -Rns "$1" || true
+        size_after=$(total_installed_size)
+        size_freed=$(( size_before - size_after ))
+
+        echo "Freed $(numfmt --to=iec --suffix=B "$size_freed")"
+    fi
+
+    read -rp "Press enter to continue"
+}
+
+clean_orphans()
+{
+    local orphan_packages
+    local confirmation
+    local size_before
+    local size_after
+    local size_freed
+    local estimated_size
+
+    orphan_packages=$(pacman -Qdtq || true)
+
+    if [[ -z "$orphan_packages" ]]
+    then
+        echo "No orphaned packages found"
+    else
+        echo "Orphaned packages: $orphan_packages"
+
+        estimated_size=$(selected_packages_size $orphan_packages)
+        echo "This will free approximately $(numfmt --to=iec --suffix=B "$estimated_size")"
+
+        read -rp "Remove these? [y/N] " confirmation
+
+        if [[ "$confirmation" == "y" || "$confirmation" == "Y" ]]
+        then
+            size_before=$(total_installed_size)
+            sudo pacman -Rns $orphan_packages || true
+            size_after=$(total_installed_size)
+            size_freed=$(( size_before - size_after ))
+
+            echo "Freed $(numfmt --to=iec --suffix=B "$size_freed")"
+        fi
+    fi
+
+    read -rp "Press enter to continue"
+}
+
+clean_cache()
+{
+    local size_before
+    local size_after
+    local size_freed
+
+    size_before=$(du -sb /var/cache/pacman/pkg 2>/dev/null | awk '{print $1}')
+    size_before=${size_before:-0}
+
+    echo "Current cache size: $(numfmt --to=iec --suffix=B "$size_before")"
+
+    sudo pacman -Sc || true
+
+    size_after=$(du -sb /var/cache/pacman/pkg 2>/dev/null | awk '{print $1}')
+    size_after=${size_after:-0}
+    size_freed=$(( size_before - size_after ))
+
+    echo "Freed $(numfmt --to=iec --suffix=B "$size_freed")"
+
+    read -rp "Press enter to continue"
+}
+
+case "${1:-}" in
+    --list)
+        list_packages
+        exit 0
+        ;;
+    --preview)
+        show_details "$2"
+        exit 0
+        ;;
+    --remove)
+        tput smcup
+        trap 'tput rmcup' EXIT
+        remove_package "$2"
+        exit 0
+        ;;
+    --clean-orphans)
+        tput smcup
+        trap 'tput rmcup' EXIT
+        clean_orphans
+        exit 0
+        ;;
+    --clean-cache)
+        tput smcup
+        trap 'tput rmcup' EXIT
+        clean_cache
+        exit 0
+        ;;
+esac
+
+fzf --ansi \
+    --header "Enter: details | Ctrl-d: remove | Ctrl-o: clean orphans | Ctrl-e: clean cache" \
+    --preview "$script_path --preview {2}" \
+    --preview-window "right:60%:wrap" \
+    --bind "ctrl-d:execute($script_path --remove {2})+reload($script_path --list)" \
+    --bind "ctrl-o:execute($script_path --clean-orphans)+reload($script_path --list)" \
+    --bind "ctrl-e:execute($script_path --clean-cache)+reload($script_path --list)" \
+    < <(list_packages)
