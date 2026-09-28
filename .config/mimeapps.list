@@ -1,0 +1,65 @@
+[Default Applications]
+# Images → Ristretto
+image/png=org.xfce.ristretto.desktop
+image/jpeg=org.xfce.ristretto.desktop
+image/gif=org.xfce.ristretto.desktop
+image/webp=org.xfce.ristretto.desktop
+image/bmp=org.xfce.ristretto.desktop
+image/tiff=org.xfce.ristretto.desktop
+image/svg+xml=org.xfce.ristretto.desktop
+
+# Programming / Code → Neovim
+text/plain=nvim.desktop
+text/css=nvim.desktop
+text/html=nvim.desktop
+text/javascript=nvim.desktop
+text/json=nvim.desktop
+text/markdown=nvim.desktop
+text/xml=nvim.desktop
+text/x-c=nvim.desktop
+text/x-c++=nvim.desktop
+text/x-csharp=nvim.desktop
+text/x-go=nvim.desktop
+text/x-java=nvim.desktop
+text/x-python=nvim.desktop
+text/x-ruby=nvim.desktop
+text/x-php=nvim.desktop
+text/x-perl=nvim.desktop
+text/x-shellscript=nvim.desktop
+text/x-rust=nvim.desktop
+text/x-swift=nvim.desktop
+text/x-kotlin=nvim.desktop
+text/x-scala=nvim.desktop
+text/x-typescript=nvim.desktop
+text/x-lua=nvim.desktop
+text/x-yaml=nvim.desktop
+text/x-toml=nvim.desktop
+text/x-makefile=nvim.desktop
+text/x-groovy=nvim.desktop
+text/x-vue=nvim.desktop
+text/x-html=nvim.desktop
+application/x-executable=nvim.desktop
+application/json=nvim.desktop
+application/yaml=nvim.desktop
+application/xml=nvim.desktop
+application/javascript=nvim.desktop
+application/x-sh=nvim.desktop
+
+# Directories → Nemo
+inode/directory=nemo.desktop
+
+# Protocols
+x-scheme-handler/discord=vesktop.desktop
+x-scheme-handler/http=nemo.desktop
+x-scheme-handler/https=nemo.desktop
+x-scheme-handler/about=nemo.desktop
+x-scheme-handler/unknown=nemo.desktop
+
+[Added Associations]
+# Fallback list
+image/png=org.xfce.ristretto.desktop;
+image/jpeg=org.xfce.ristretto.desktop;
+image/gif=org.xfce.ristretto.desktop;
+image/webp=org.xfce.ristretto.desktop;
+text/plain=nvim.desktop;
+inode/directory=nemo.desktop;
