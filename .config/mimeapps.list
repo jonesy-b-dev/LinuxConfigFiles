@@ -50,10 +50,6 @@ inode/directory=nemo.desktop
 
 # Protocols
 x-scheme-handler/discord=vesktop.desktop
-x-scheme-handler/http=nemo.desktop
-x-scheme-handler/https=nemo.desktop
-x-scheme-handler/about=nemo.desktop
-x-scheme-handler/unknown=nemo.desktop
 
 [Added Associations]
 # Fallback list
