@@ -1,3 +1,8 @@
+-- THEMING
+hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme \"Materia-custom\"")
+hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme \"prefer-dark\"")
+hl.exec_cmd("gsettings set org.gnome.desktop.interface icon-theme \"Marwaita Dark\"")
+
 -- Refer to https://wiki.hypr.land/Configuring/Basics/Variables/
 hl.config({
 	general = {

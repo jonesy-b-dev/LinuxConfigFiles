@@ -37,10 +37,6 @@ hl.on("hyprland.start", function()
 	hl.exec_cmd("easyeffects & sleep 3 && easyeffects -w")
 end)
 
--- THEMING
-hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme \"Adwaita-dark\"")
-hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme \"prefer-dark\"")
-
 -- Env variables
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
