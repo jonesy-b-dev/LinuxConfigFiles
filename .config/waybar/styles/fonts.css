@@ -11,7 +11,7 @@ tooltip label {
 }
 
 #workspaces button.active label{
-	font-size: 15;
+	font-size: 15px;
 }
 #workspaces button.focused label,
 #custom-distro {

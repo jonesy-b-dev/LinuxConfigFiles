@@ -17,7 +17,7 @@
 }
 #temperature {
 	background-color: @temperature;
-	padding: 0px 7px;
+	padding: 0px 4px;
 }
 
 /*------------
@@ -30,7 +30,7 @@
 }
 #memory {
 	background-color: @memory;
-	padding: 0px 8px;
+	padding: 0px 5px;
 }
 
 /*---------
@@ -43,7 +43,7 @@
 }
 #cpu {
 	background-color: @cpu;
-	padding: 0px 7px;
+	padding: 0px 4px;
 }
 #custom-left_inv.1 {
 	color: @cpu;
@@ -79,7 +79,7 @@
 ----------*/
 
 #clock.time {
-	padding-right: 6px;
+	padding: 0px 5px;
 	background-color: @time;
 }
 #custom-right_div.3 {
@@ -92,7 +92,7 @@
 ----------*/
 
 #clock.date {
-	padding-left: 6px;
+	padding: 0px 4px;
 	background-color: @date;
 }
 #custom-right_div.4 {
@@ -106,7 +106,7 @@
 
 #network {
 	background-color: @tray;
-	padding: 0 6px 0 4px;
+	padding: 0 7px 0 5px;
 }
 #bluetooth {
 	background-color: @tray;
@@ -114,7 +114,7 @@
 }
 #custom-update {
 	background-color: @tray;
-	padding: 0 8px 0 2px;
+	padding: 0 9px 0 2px;
 }
 #custom-right_div.5 {
 	color: @tray;

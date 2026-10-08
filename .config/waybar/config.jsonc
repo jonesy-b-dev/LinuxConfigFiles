@@ -29,7 +29,7 @@
 		"custom/distro",
 		"custom/right_div#2",
 		"custom/right_inv#1",
-		"idle_inhibitor",
+	//	"idle_inhibitor",
 		"clock#time",
 		"custom/right_div#3",
 		"clock#date",
