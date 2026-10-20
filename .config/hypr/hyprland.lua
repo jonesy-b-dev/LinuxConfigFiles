@@ -40,6 +40,7 @@ end)
 -- Env variables
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
+hl.env("HYPRSHOT_DIR", "~/Pictures/Screenshots")
 
 -- PERMISSIONS https://wiki.hypr.land/Configuring/Advanced-and-Cool/Permissions/
 hl.config({ ecosystem = { enforce_permissions = true } })
