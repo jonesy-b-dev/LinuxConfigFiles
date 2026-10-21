@@ -16,12 +16,12 @@ Feel free to use anything you like!
 * [Tmux](https://github.com/jonesy-b-dev/LinuxConfigFiles/blob/main/.tmux.conf)
 
 ### Wayland
-* [Hyprland](https://github.com/jonesy-b-dev/LinuxConfigFiles/blob/main/.config/hypr/hyprland.conf)
+* [Hyprland](https://github.com/jonesy-b-dev/LinuxConfigFiles/blob/main/.config/hypr/hyprland.lua)
 * [Hyprlock](https://github.com/jonesy-b-dev/LinuxConfigFiles/blob/main/.config/hypr/hyprlock.conf)
 * [Hyprpaper](https://github.com/jonesy-b-dev/LinuxConfigFiles/blob/main/.config/hypr/hyprpaper.conf)
 * [Waybar](https://github.com/jonesy-b-dev/LinuxConfigFiles/tree/main/.config/waybar)
 * [Sway](https://github.com/jonesy-b-dev/LinuxConfigFiles/blob/main/.config/sway/config)
-            
+
 ### X11
 * [i3](https://github.com/jonesy-b-dev/LinuxConfigFiles/blob/main/.config/i3/config)
 * [Polybar](https://github.com/jonesy-b-dev/LinuxConfigFiles/tree/main/.config/polybar)
@@ -37,5 +37,5 @@ Feel free to use anything you like!
 * [zhs](https://github.com/jonesy-b-dev/LinuxConfigFiles/blob/main/.zshrc)
 
 ## Other
-* [Fastfetch](https://github.com/jonesy-b-dev/LinuxConfigFiles/blob/main/fastfetch/config.jsonc)
+* [Fastfetch](https://github.com/jonesy-b-dev/LinuxConfigFiles/blob/main/.config/fastfetch/config.jsonc)
 * [dunst](https://github.com/jonesy-b-dev/LinuxConfigFiles/tree/main/.config/dunst/dunstrc)
