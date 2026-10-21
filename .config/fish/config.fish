@@ -26,9 +26,8 @@ set -gx LESS_TERMCAP_us \e'[01;32m'
 
 # ── PATH additions ────────────────────────────────────────────────────────────
 fish_add_path "$HOME/.local/scripts"
-
-# ── Rust / Cargo ──────────────────────────────────────────────────────────────
 fish_add_path "$HOME/.cargo/bin"
+fish_add_path "$HOME/.dotnet/tools"
 
 # ── Aliases (sourced from ~/.config/fish/aliases.fish if it exists) ───────────
 if test -f ~/.config/fish/aliases.fish
