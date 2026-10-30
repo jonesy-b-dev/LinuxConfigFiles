@@ -4,7 +4,7 @@ if KillShortcut then
 	hl.bind(MainMod .. " + M",
 		hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
 end
-hl.bind(MainMod .. " + J", hl.dsp.layout("togglesplit")) -- dwindle only
+hl.bind(MainMod .. " + U", hl.dsp.layout("togglesplit")) -- dwindle only
 hl.bind(MainMod .. " + V", hl.dsp.window.float({ action = "toggle" }))
 hl.bind(MainMod .. " + P", hl.dsp.window.pseudo())
 
@@ -50,6 +50,7 @@ hl.bind(MainMod .. " + SHIFT + h", hl.dsp.window.resize({ x = -30, y = 0, relati
 hl.bind(MainMod .. " + SHIFT + k", hl.dsp.window.resize({ x = 0, y = -30, relative = true }), { repeating = true })
 hl.bind(MainMod .. " + SHIFT + j", hl.dsp.window.resize({ x = 0, y = 30, relative = true }), { repeating = true })
 
+-- Swap window with keys
 hl.bind(SecondMod .. " + h", hl.dsp.window.swap({ direction = "l" }))
 hl.bind(SecondMod .. " + j", hl.dsp.window.swap({ direction = "d" }))
 hl.bind(SecondMod .. " + k", hl.dsp.window.swap({ direction = "u" }))
