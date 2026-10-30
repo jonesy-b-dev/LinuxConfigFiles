@@ -102,4 +102,11 @@ hl.config({
 	dwindle = {
 		preserve_split = false,
 	},
+	misc = {
+		force_default_wallpaper = 0,
+		disable_hyprland_logo   = true,
+	},
+	layers = {
+		allow_new_top_layers_over_existing_fullscreen = true, -- Set to false to make newly mapped top layers render below existing covering fullscreen window
+	},
 })
