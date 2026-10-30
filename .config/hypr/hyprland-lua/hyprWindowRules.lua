@@ -40,3 +40,8 @@ hl.window_rule({
 	match     = { class = "com.github.wwmm.easyeffects" },
 	workspace = "special:silent",
 })
+
+hl.window_rule({
+  match = { class = "^(ghidra|Ghidra)$" },
+  decorate = true,
+})
