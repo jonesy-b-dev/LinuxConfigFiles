@@ -41,7 +41,7 @@ end)
 -- Env variables
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
-hl.env("HYPRSHOT_DIR", "~/Pictures/Screenshots")
+hl.env("QT_AUTO_SCREEN_SCALE_FACTOR", "1")
 
 -- PERMISSIONS https://wiki.hypr.land/Configuring/Advanced-and-Cool/Permissions/
 hl.config({ ecosystem = { enforce_permissions = true } })
@@ -49,6 +49,7 @@ hl.permission("/usr/(bin|local/bin)/grim", "screencopy", "allow")
 hl.permission("/usr/bin/hyprpm", "plugin", "allow")
 hl.permission("/usr/(bin|local/bin)/hyprlock", "screencopy", "allow")
 hl.permission("/usr/(bin|local/bin)/hyprpicker", "screencopy", "allow")
+hl.permission("/usr/(bin|local/bin)/hyprpm", "plugin", "allow")
 
 -- LOOK AND FEEL
 require("hyprland-lua.hyprLookAndFeel")
