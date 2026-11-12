@@ -31,7 +31,7 @@ hl.monitor({
 
 -- AUTOSTART
 hl.on("hyprland.start", function()
-	hl.exec_cmd("hyprpaper & hyprpm reload -n && hyprctl reload") -- Hypr stuff
+	hl.exec_cmd("hyprpm reload -n && hyprctl reload") -- Hypr stuff
 	hl.exec_cmd("waybar")                                                   -- Rice stuff
 	hl.exec_cmd("copyq & openrgb --profile 'Orange' & protonvpn-app")       -- Apps
 	hl.exec_cmd("wlsunset -l 52.37 -L 4.90") 								-- Night light

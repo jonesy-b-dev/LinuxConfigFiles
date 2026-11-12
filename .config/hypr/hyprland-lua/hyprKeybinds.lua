@@ -34,7 +34,7 @@ require("hyprland-lua.hyprWorkSpaceMultiMonitor")
 
 -- Example special workspace (scratchpad)
 hl.bind(MainMod .. " + D", hl.dsp.workspace.toggle_special("magic"))
-hl.bind(MainMod .. " + SHIFT + S", hl.dsp.window.move({ workspace = "special:magic" }))
+hl.bind(MainMod .. " + SHIFT + D", hl.dsp.window.move({ workspace = "special:magic" }))
 
 -- Scroll through existing workspaces with MainMod + scroll
 hl.bind(MainMod .. " + mouse_down", hl.dsp.focus({ workspace = "e+1" }))
