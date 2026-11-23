@@ -1,1 +1,8 @@
 @theme "~/.config/rofi/jonesy.rasi"
+configuration
+{
+    modi: "combi,calc";
+    combi-modes: "drun,window,run";
+    show-icons: true;
+    terminal: "foot";
+}

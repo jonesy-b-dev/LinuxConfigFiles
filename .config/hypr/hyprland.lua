@@ -5,7 +5,7 @@
 -- PROGRAMS
 Terminal = "foot"
 FileManager = "nemo"
-Menu = "ulauncher"
+Menu = "rofi -show combi"
 
 -- Variables
 KillShortcut = false
